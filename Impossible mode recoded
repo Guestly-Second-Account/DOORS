@@ -98,18 +98,10 @@ _G.baseval = -2
 task.wait(0)
 _G.stats.Value += 1
 
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
+--Warning Ui
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/WARNING%20UI"))()
 
----====== Display achievement ======---
-achievementGiver({
-    Title = "The Cursed Hotel",
-    Desc = "It cursed..",
-    Reason = "Executed Impossible Mode",
-    Image = "rbxassetid://109486484922712"
-})
-
-game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode]: Script Succesfully Executed/Loaded.</font>")
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode Recoded]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Intro"))()
