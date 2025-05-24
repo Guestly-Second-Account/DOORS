@@ -10,10 +10,6 @@ local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFr
 caption.TextColor3 = Color3.fromRGB(150, 5, 5)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Recoded made by Guestly",true)
 
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Looped = true
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = 1.5
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow:Play()
-
 -- Custom Crucifix
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/V2"))()
 
@@ -436,8 +432,9 @@ _G.stats.Value += 30
     end
 end)()
 
--- Common Sense
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Como%20ses"))()
+--Background Music
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = 0.7
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow:Play()
 
 -- Guiding Light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Guiding"))()
