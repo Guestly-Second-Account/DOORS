@@ -1,14 +1,9 @@
+-- Loading Ui
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Loading%20ui"))()
+wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
-caption.TextColor3 = Color3.fromRGB(150, 5, 5)
+caption.TextColor3 = Color3.fromRGB(250, 0, 0)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Impossible Mode Recoded Actived!",true)
-wait(2)
-local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
-caption.TextColor3 = Color3.fromRGB(150, 5, 5)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Original made by Oof",true)
-wait(2)
-local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
-caption.TextColor3 = Color3.fromRGB(150, 5, 5)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Recoded made by Guestly",true)
 
 -- Custom Crucifix
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/V2"))()
