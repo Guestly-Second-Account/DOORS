@@ -51,7 +51,7 @@ local frame = Instance.new("Frame",gui)
 frame.BorderSizePixel = 0
 frame.BackgroundTransparency = 1
 frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)  
-frame.Position = UDim2.new(0.637, 0,0.88, 0)
+frame.Position = UDim2.new(1, -320, 1, -35)
 frame.Size = UDim2.new(0, 310,0, 25)
 local corner = Instance.new("UICorner",frame)
 corner.CornerRadius = UDim.new(0.25,0)
@@ -78,6 +78,7 @@ num.Changed:Connect(function()
     local anim = tweenservice:Create(bar,TweenInfo.new(5,Enum.EasingStyle.Linear),{Size = UDim2.new(0,num.Value,0,15)})
     anim:Play()
 if num.Value >= 200 then
+wait(15)
 num.Value = 0 
 local index = math.random(1, #scriptURLs)
         local url = scriptURLs[index]
