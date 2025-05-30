@@ -86,8 +86,26 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode Recoded]: Script Succesfully Executed/Loaded.</font>")
 
+-- Nightmare Screech Changer
+game.ReplicatedStorage.Entities.Screech.Top.Eyes.Color = Color3.fromRGB(255, 0, 0)
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Caught.PlaybackSpeed = 0.7
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Attack.PlaybackSpeed = 0.7
+
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Intro"))()
+
+-- Fake Screech
+coroutine.wrap(function()
+    while true do
+        wait(50)
+        local player = game.Players.LocalPlayer
+local mainGame = require(player.PlayerGui.MainUI.Initiator.Main_Game)
+local screechModule =
+require(player.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)
+
+screechModule(mainGame)
+    end
+end)()
 
 -- Nightmare Rush and Ambush
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Nightmare"))()
