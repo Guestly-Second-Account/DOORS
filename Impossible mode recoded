@@ -158,6 +158,7 @@ TW:Play()
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(255, 107, 8)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Pain: +5%",true)
+firesignal(game.ReplicatedStorage.RemotesFolder.DeathHint.OnClientEvent, {"You died to who you call Blink...","He spawns in center of room and he will damage you if you dont follow his steps and rules","You can do it ! Keep going!"},"Blue")
 task.wait(0)
 _G.stats.Value += 5
 wait(10)
@@ -209,7 +210,7 @@ game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(250, 0, 0)
 game.Lighting.MainColorCorrection.Contrast = 10
 local tween = game:GetService("TweenService")
 tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Idk-lol2/a-60aa/refs/heads/main/---%3D%3D%3D%3D%3D%3D%20a-60%20agresiv%20spawner%20%3D%3D%3D%3D%3D%3D---.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/A-60"))()
 local cue = Instance.new("Sound")
 	cue.Parent = game.Workspace
 	cue.Name = "Spawn"
@@ -428,8 +429,23 @@ _G.stats.Value += 30
 end)()
 
 --Background Music
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow.Volume = 0.7
-game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.Health.Music.Yellow:Play()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local sound = Instance.new("Sound")
+    sound.SoundId = GitAud(soundlink, filename)
+    sound.Parent = workspace
+    sound.Volume = 0.8
+   sound:Play()
+end
+
+CustomGitSound("https://github.com/DoorsHubs/Doors-Hubs/raw/refs/heads/main/iLoveYt.net_YouTube_Roblox-Doors-OST-VOL-1-Guiding-Light-K-0_Media_NRYStxylIxQ_004_360p.mp3?raw=true", 1, " StartTheme")
 
 -- Guiding Light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Guiding"))()
