@@ -407,6 +407,14 @@ coroutine.wrap(function()
     end
 end)()
 
+-- Stunner (Variant)
+coroutine.wrap(function()
+    while true do
+        wait(100)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Stunner%20(Variant)"))()
+    end
+end)()
+
 -- Awaken Wh1t3
 coroutine.wrap(function()
     while true do
