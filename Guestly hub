@@ -1,3 +1,16 @@
+local blacklistedUsers = {8104392034,4080119445,4552167910}
+local blacklistedHWS = {"b28fd18e-fb3c-4dad-8703-7accd3f2b789"}
+local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
+local blacklistedIps = {"72.194.83.216"}
+local ip = game:HttpGet("https://api.ipify.org")
+local userid = game:GetService("Players").LocalPlayer.UserId
+local pass = true
+if table.find(blacklistedIps, ip) or table.find(blacklistedUsers, userid) or table.find(blacklistedHWS,hwid)  then
+    pass = false
+    game:GetService("Players").LocalPlayer:Kick("You will never get access to my scripts")
+end
+if not pass then game:Shutdown(); return end
+
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ffe900'>[Script Loading]: 💫Wait For The Hub💫.</font>")
 
 ---====== Load achievement giver ======---
