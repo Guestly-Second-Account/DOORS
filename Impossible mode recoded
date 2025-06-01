@@ -407,11 +407,11 @@ coroutine.wrap(function()
     end
 end)()
 
--- Stunner (Variant)
+-- Subtlety
 coroutine.wrap(function()
     while true do
         wait(100)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Stunner%20(Variant)"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
     end
 end)()
 
