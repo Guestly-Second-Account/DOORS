@@ -415,6 +415,14 @@ coroutine.wrap(function()
     end
 end)()
 
+-- Coersion
+coroutine.wrap(function()
+    while true do
+        wait(290)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
+    end
+end)()
+
 -- Awaken Wh1t3
 coroutine.wrap(function()
     while true do
