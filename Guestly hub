@@ -39,7 +39,7 @@ wait(2)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(3, 255, 11)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Enjoy The Script!",true)
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/Librarykavoui"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("🌏Doors Hub made by Pinki/Guest💯", "Serpent")
 local Tab = Window:NewTab("🔪Modes🔪")
 local Section = Tab:NewSection("All of Modes")
