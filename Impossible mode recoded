@@ -207,64 +207,10 @@ end)()
 -- Dread
 coroutine.wrap(function()
     while true do
-        wait(350)
+        wait(280)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Dread%20spawner"))()
-    end
-end)()
-
--- A-60
-coroutine.wrap(function()
-    while true do
-        wait(380)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(120, 1, 1)
-game.Lighting.MainColorCorrection.Contrast = 10
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(250, 0, 0)})
-TW:Play()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(250, 0, 0)
-game.Lighting.MainColorCorrection.Contrast = 10
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/A-60"))()
-local cue = Instance.new("Sound")
-	cue.Parent = game.Workspace
-	cue.Name = "Spawn"
-	cue.SoundId = "rbxassetid://175024455"
-	cue.Volume = 1
-	cue.PlaybackSpeed = 1.2
-	cue:Play()
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(255, 107, 8)
-game.Lighting.MainColorCorrection.Contrast = 10
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
-caption.TextColor3 = Color3.fromRGB(255, 107, 8)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Pain: +20%",true)
-task.wait(0)
-_G.stats.Value += 20
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-    end
-end)()
-
--- A-200
-coroutine.wrap(function()
-    while true do
-        wait(490)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/A-200%20spawner"))()
     end
 end)()
 
@@ -423,6 +369,14 @@ coroutine.wrap(function()
     while true do
         wait(290)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
+    end
+end)()
+
+-- Forcibly
+coroutine.wrap(function()
+    while true do
+        wait(370)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
     end
 end)()
 
