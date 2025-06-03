@@ -3,7 +3,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(250, 0, 0)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Impossible Mode Recoded Actived!",true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Impossible Mode Re-Degenerate Actived!",true)
 
 -- Guiding Light Crucifix
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/V2"))()
@@ -87,7 +87,7 @@ _G.stats.Value += 1
 --Warning Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/WARNING%20UI"))()
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode Recoded]: Script Succesfully Executed/Loaded.</font>")
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode Re-Degenerate]: Script Succesfully Executed/Loaded.</font>")
 
 -- Nightmare Screech Changer
 game.ReplicatedStorage.Entities.Screech.Top.Eyes.Color = Color3.fromRGB(255, 0, 0)
