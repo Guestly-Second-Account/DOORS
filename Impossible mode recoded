@@ -419,24 +419,5 @@ _G.stats.Value += 30
     end
 end)()
 
---Background Music
-function GitAud(soundgit,filename)
-    SoundName=tostring(SoundName)
-    local url=soundgit
-    local FileName = filename
-    writefile(FileName..".mp3", game:HttpGet(url))
-    return (getcustomasset or getsynasset)(FileName..".mp3")
-end
-
-function CustomGitSound(soundlink, vol, filename)
-    local sound = Instance.new("Sound")
-    sound.SoundId = GitAud(soundlink, filename)
-    sound.Parent = workspace
-    sound.Volume = 0.8
-   sound:Play()
-end
-
-CustomGitSound("https://github.com/DoorsHubs/Doors-Hubs/raw/refs/heads/main/iLoveYt.net_YouTube_Roblox-Doors-OST-VOL-1-Guiding-Light-K-0_Media_NRYStxylIxQ_004_360p.mp3?raw=true", 1, " StartTheme")
-
 -- Guiding Light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Guiding"))()
