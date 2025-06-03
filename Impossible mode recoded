@@ -62,7 +62,7 @@ local scriptURLs = {
 num.Changed:Connect(function()
     local anim = tweenservice:Create(bar,TweenInfo.new(5,Enum.EasingStyle.Linear),{Size = UDim2.new(0,num.Value,0,15)})
     anim:Play()
-if num.Value >= 200 then
+if num.Value >= 300 then
 wait(15)
 num.Value = 0 
 local index = math.random(1, #scriptURLs)
