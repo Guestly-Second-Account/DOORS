@@ -299,16 +299,6 @@ _G.stats.Value += 5
     end
 end)()
 
--- Depth
-coroutine.wrap(function()
-    while true do
-        wait(700)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Depth%20recoded"))()
-    end
-end)()
-
 -- Awaken Smiler
 coroutine.wrap(function()
     while true do
@@ -377,6 +367,14 @@ coroutine.wrap(function()
     while true do
         wait(370)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
+    end
+end)()
+
+-- Grief
+coroutine.wrap(function()
+    while true do
+        wait(410)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
     end
 end)()
 
