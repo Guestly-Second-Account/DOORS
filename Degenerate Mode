@@ -104,7 +104,9 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(100)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
     end
 end)()
 
@@ -112,7 +114,9 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(190)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
     end
 end)()
 
@@ -120,7 +124,9 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(250)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
     end
 end)()
 
@@ -128,7 +134,9 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(360)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
     end
 end)()
 
@@ -136,6 +144,8 @@ end)()
 coroutine.wrap(function()
     while true do
         wait(290)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Gambler"))()
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Gambler"))()
     end
 end)()
