@@ -346,38 +346,6 @@ coroutine.wrap(function()
     end
 end)()
 
--- Subtlety
-coroutine.wrap(function()
-    while true do
-        wait(100)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
-    end
-end)()
-
--- Coersion
-coroutine.wrap(function()
-    while true do
-        wait(290)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
-    end
-end)()
-
--- Forcibly
-coroutine.wrap(function()
-    while true do
-        wait(370)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
-    end
-end)()
-
--- Grief
-coroutine.wrap(function()
-    while true do
-        wait(410)
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
-    end
-end)()
-
 -- Awaken Wh1t3
 coroutine.wrap(function()
     while true do
