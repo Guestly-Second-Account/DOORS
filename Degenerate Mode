@@ -110,10 +110,20 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
     end
 end)()
 
--- Coersion
+-- Looper
 coroutine.wrap(function()
     while true do
         wait(190)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Looper"))()
+    end
+end)()
+
+-- Coersion
+coroutine.wrap(function()
+    while true do
+        wait(380)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
@@ -123,7 +133,7 @@ end)()
 -- Forcibly
 coroutine.wrap(function()
     while true do
-        wait(340)
+        wait(650)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
@@ -133,7 +143,7 @@ end)()
 -- Grief
 coroutine.wrap(function()
     while true do
-        wait(450)
+        wait(790)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
@@ -153,7 +163,7 @@ end)()
 -- Fugitive
 coroutine.wrap(function()
     while true do
-        wait(630)
+        wait(897)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Fugitive"))()
@@ -163,7 +173,7 @@ end)()
 -- Reflector
 coroutine.wrap(function()
     while true do
-        wait(740)
+        wait(1120)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Reflector"))()
@@ -173,7 +183,7 @@ end)()
 -- Voider
 coroutine.wrap(function()
     while true do
-        wait(920)
+        wait(1399)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Voider"))()
