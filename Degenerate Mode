@@ -15,6 +15,10 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 coroutine.wrap(function()
     while true do
         wait()
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Door.Hinge:Destroy()
         workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Unlock.SoundId = "rbxassetid://6431334087"
 
 workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Open.SoundId = "rbxassetid://833871080"
