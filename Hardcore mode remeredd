@@ -75,3 +75,13 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Rebound"))()
     end
 end)()
+
+-- Deer God
+coroutine.wrap(function()
+    while true do
+        wait(780)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Deer%20God"))()
+    end
+end)()
