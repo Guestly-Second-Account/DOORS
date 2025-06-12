@@ -52,7 +52,7 @@ coroutine.wrap(function()
         wait(700)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Hardcore%20a-60"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/A-60%20hardcore%20jumpscare"))()
     end
 end)()
 
