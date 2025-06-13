@@ -114,6 +114,14 @@ coroutine.wrap(function()
     end
 end)()
 
+-- Blinker
+coroutine.wrap(function()
+    while true do
+        wait(85)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Blinker"))()
+    end
+end)()
+
 -- Subtlety
 coroutine.wrap(function()
     while true do
