@@ -36,6 +36,14 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/re
 -- Nightmare Rush and Ambush
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Nightmare"))()
 
+-- Shocker
+coroutine.wrap(function()
+    while true do
+        wait(35)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Shocker%20hardcore%20concac"))()
+    end
+end)()
+
 -- Ripper
 coroutine.wrap(function()
     while true do
