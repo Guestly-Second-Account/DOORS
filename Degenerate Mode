@@ -5,12 +5,6 @@ local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFr
 caption.TextColor3 = Color3.fromRGB(3, 255, 11)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Degenerate Mode Actived!",true)
 
--- Guiding Light Crucifix
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/V2"))()
-
--- Curious Light Crucifix
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Crucifix%20but%20curious"))()
-
 -- Doors sound changer
 coroutine.wrap(function()
     while true do
