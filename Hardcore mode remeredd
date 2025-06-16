@@ -47,6 +47,14 @@ coroutine.wrap(function()
     end
 end)()
 
+-- A-90
+coroutine.wrap(function()
+    while true do
+        wait(90)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/A-90%20hardocre%20concac"))()
+    end
+end)()
+
 -- Ripper
 coroutine.wrap(function()
     while true do
