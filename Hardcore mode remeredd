@@ -31,6 +31,9 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 --Warning Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Hardcore%20mdoe%20dit%20me%20warning%20ui"))()
 
+-- Lighting Stand Model Changer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Lighting%20stand%20model%20changer"))()
+
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ff7700'>[Hardcore Mode (Re-Remastered)]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
