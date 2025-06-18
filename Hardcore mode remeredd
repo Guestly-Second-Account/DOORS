@@ -127,6 +127,3 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Dread"))()
     end
 end)()
-
--- Seek Hardcore
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/HARDCORE%20SEEK"))()
