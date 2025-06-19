@@ -35,6 +35,57 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 --Warning Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Hardcore%20mdoe%20dit%20me%20warning%20ui"))()
 
+-- Paintings Images Changer
+coroutine.wrap(function()
+local painters = 1
+local paints = {
+	[1] = {"rbxassetid://12625633899","Depth The Dark."},
+	[2] = {"rbxassetid://11678966779","WH1T3..."},
+	[3] = {"rbxassetid://11877292178","???"},
+	[5] = {"rbxassetid://128206094637578","Guestly."},
+      [6] = {"rbxassetid://82969730394546","Vuivuiviu2."},
+	[8] = {"rbxassetid://13187070161","Smiler - Dupe."},
+	[9] = {"rbxassetid://91844042069377","Nowhywhat."}
+}
+
+-- New Paintings
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+	local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+	if room:FindFirstChild("Assets") then
+		local paintings = {}
+		for i,painting in next,room:FindFirstChild("Assets"):GetChildren() do
+			if painting.Name:find("Painting") then
+				table.insert(paintings,painting)
+			end
+		end
+		if #paintings > 0 then
+			local currentpainting
+			if paintings[#paintings] then
+				painters = painters + 1
+				currentpainting = paintings[#paintings]
+			else
+				currentpainting = paintings[1]
+			end
+			if currentpainting then
+				if currentpainting:FindFirstChild("Canvas") then
+					local selected = paints[math.random(1,#paints)]
+					if currentpainting:FindFirstChild("InteractPrompt") then
+						local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+                        cloning.Name = "fakeInteract"
+						cloning.Parent = currentpainting
+						currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+						local t = cloning.Triggered:Connect(function()
+							require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(string.gsub("This painting is titled \"NAMEOFTHING\"","NAMEOFTHING",selected[2]), true)
+						end)
+					end
+					currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+				end
+			end
+		end
+	end
+end)
+end)()
+
 -- Lighting Stand Model Changer
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Lighting%20stand%20model%20changer"))()
 
