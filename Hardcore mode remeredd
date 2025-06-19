@@ -4,6 +4,10 @@ wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(255, 125, 3)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Hardcore Mode Re-Remastered Actived!",true)
+wait(2)
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(255, 125, 3)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits by Guestly, Nowhywhat, Voorpr0, Vuivuiviu2",true)
 
 -- Doors sound changer
 coroutine.wrap(function()
@@ -37,7 +41,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/re
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ff7700'>[Hardcore Mode (Re-Remastered)]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Hardcore%20mode%20fucking%20intro"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Intro%20newMmk"))()
 
 -- Nightmare Rush and Ambush
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Nightmare"))()
