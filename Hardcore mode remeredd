@@ -127,3 +127,13 @@ coroutine.wrap(function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Dread"))()
     end
 end)()
+
+-- Frostbite
+coroutine.wrap(function()
+    while true do
+        wait(660)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/DOORS/refs/heads/main/FROSTBITE%20BUTEZ"))()
+    end
+end)()
