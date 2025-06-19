@@ -4,6 +4,10 @@ wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(3, 255, 11)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Degenerate Mode Actived!",true)
+wait(2)
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(3, 255, 11)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credit by Guestly",true)
 
 -- Doors sound changer
 coroutine.wrap(function()
@@ -80,9 +84,6 @@ _G.stats = num
 _G.baseval = -2
 task.wait(0)
 _G.stats.Value += 1
-
---Warning Ui
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Warning%20Ui"))()
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Degenerate Mode]: Script Succesfully Executed/Loaded.</font>")
 
@@ -182,15 +183,5 @@ coroutine.wrap(function()
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Reflector"))()
-    end
-end)()
-
--- Voider
-coroutine.wrap(function()
-    while true do
-        wait(1399)
-       
-game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Voider"))()
     end
 end)()
