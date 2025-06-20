@@ -94,8 +94,20 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage(
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Intro%20newMmk"))()
 
--- Nightmare Rush and Ambush
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Nightmare"))()
+-- Nightmare Rush
+game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabel.Image = "rbxassetid://11675103078"
+
+game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabelBig.Image = "rbxassetid://11675103078"
+
+-- Raged Rush
+coroutine.wrap(function()
+    while true do
+        wait(160)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Raged%20rush"))()
+    end
+end)()
 
 -- Shocker
 coroutine.wrap(function()
