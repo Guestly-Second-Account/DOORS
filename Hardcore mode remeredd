@@ -39,8 +39,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/re
 coroutine.wrap(function()
 local painters = 1
 local paints = {
-	[1] = {"rbxassetid://12625633899","Depth The Dark."},
-	[2] = {"rbxassetid://11678966779","WH1T3..."},
+	[1] = {"rbxassetid://82825758120449","Cali Get Out"},
+	[2] = {"rbxassetid://133995061302751",Hsub Like Shit."},
 	[3] = {"rbxassetid://11877292178","???"},
 	[5] = {"rbxassetid://128206094637578","Guestly."},
       [6] = {"rbxassetid://82969730394546","Vuivuiviu2."},
@@ -93,21 +93,6 @@ game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage(
 
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Intro%20newMmk"))()
-
--- Nightmare Rush
-game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabel.Image = "rbxassetid://11675103078"
-
-game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabelBig.Image = "rbxassetid://11675103078"
-
--- Raged Rush
-coroutine.wrap(function()
-    while true do
-        wait(160)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Raged%20rush"))()
-    end
-end)()
 
 -- Shocker
 coroutine.wrap(function()
