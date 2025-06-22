@@ -1,3 +1,8 @@
+local AntiDoorOpener = game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
+end)
+
 -- Loading Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Loading%20Ui"))()
 wait(1)
@@ -86,6 +91,8 @@ task.wait(0)
 _G.stats.Value += 1
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Degenerate Mode]: Script Succesfully Executed/Loaded.</font>")
+
+AntiDoorOpener:Disconnect()
 
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Intro"))()
