@@ -1,8 +1,3 @@
-local AntiDoorOpener = game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
-game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
-game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
-end)
-
 -- Loading Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Loading%20ui"))()
 wait(1)
@@ -101,15 +96,13 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#26ff00'>[Impossible Mode Re-Degenerate]: Script Succesfully Executed/Loaded.</font>")
 
-AntiDoorOpener:Disconnect()
-
 -- Nightmare Screech Changer
 game.ReplicatedStorage.Entities.Screech.Top.Eyes.Color = Color3.fromRGB(255, 0, 0)
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Caught.PlaybackSpeed = 0.7
 game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Attack.PlaybackSpeed = 0.7
 
 -- Intro
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Intro%20newMmk"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Impossibleintro"))()
 
 -- Fake Screech
 coroutine.wrap(function()
