@@ -37,6 +37,9 @@ game.Players.LocalPlayer.Character:SetAttribute("CanJump", true)
 -- Sprint Bar
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Hardcore%20Sprint%20System%20(PC%20and%20Mobile%20Adaptation).lua.txt"))()
 
+-- Guiding light turn to Mischevious light
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChronoAcceleration/Hotel-Plus-Plus/refs/heads/main/Backend/MischeviousLight.lua"))()
+
 --Warning Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Hardcore%20mdoe%20dit%20me%20warning%20ui"))()
 
