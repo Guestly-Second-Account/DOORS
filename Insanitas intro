@@ -1,0 +1,97 @@
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local sound = Instance.new("Sound")
+    sound.SoundId = GitAud(soundlink, filename)
+    sound.Parent = workspace
+    sound.Volume = 2
+    sound.PlaybackSpeed = 1
+    sound.Name = "HardcoreIntro"
+   sound:Play()
+end
+
+CustomGitSound("https://github.com/Darker-TheDarkestGuy/DOORS/raw/refs/heads/main/lv_0_20250622143220.mp3?raw=true", 1, " HardcoreIntro")
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camera = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+camera.CFrame = camera.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(20, 5, 5, 3, 2, 1)
+
+wait(1.7)
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(0, 0, 0)
+game.Lighting.MainColorCorrection.Contrast = 0.01
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(5), {Contrast = 0}):Play()
+
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "RandomImageGui"
+screenGui.Parent = playerGui
+screenGui.IgnoreGuiInset = true
+
+local red = Instance.new("ImageLabel")
+red.Name = "Hardcore"
+red.Size = UDim2.new(1, 70, 1, 30)
+red.BackgroundTransparency = 1 -- Make the background fully transparent
+red.Image = "rbxassetid://92342035324870" -- Set the image using a random Image ID
+red.ImageTransparency = 0
+red.Parent = screenGui
+wait(4)
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Players.LocalPlayer.PlayerGui.RandomImageGui.Hardcore, TweenInfo.new(5),{ImageTransparency = 1})
+TW:Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+
+local CameraShaker = require(game.ReplicatedStorage.CameraShaker)
+local camera = game.Workspace.CurrentCamera
+local camShake = CameraShaker.new(Enum.RenderPriority.Camera.Value, function(shakeCf)
+camera.CFrame = camera.CFrame * shakeCf
+end)
+camShake:Start()
+camShake:ShakeOnce(5, 5, 3, 2, 1, 1)
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local sound = Instance.new("Sound")
+    sound.SoundId = GitAud(soundlink, filename)
+    sound.Parent = workspace
+    sound.Volume = 1.5
+    sound.PlaybackSpeed = 0.9
+    sound.Name = "Horror"
+   sound:Play()
+end
+
+CustomGitSound("https://github.com/ChronoAcceleration/Comet-Development/blob/main/Doors/Assets/Horror/CourtyardEntry.mp3?raw=true", 1, " Horror")
+
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(255, 3, 125)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Welcome to the Death..",true)
+wait(7)
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ff0083'>Are you ready?</font>")
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(255, 3, 125)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("You can't survive the MADNESS",true)
+wait(5)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).remind("This mode contains sudden jumpscares", true)
