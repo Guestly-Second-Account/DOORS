@@ -1,0 +1,52 @@
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Visible = true
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.console:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.pc:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Icon:Destroy()
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading"
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Desc.Text = "Script is loading. Hold on!"
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Title.Text = "Insanitas Mode"
+wait(3)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 5%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 10%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 15%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 20%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 25%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 30%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 35%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 40%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 45%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 50%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 55%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 60%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 65%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 70%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 75%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 80%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 85%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 90%"
+wait(0.2)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 95%"
+wait(3)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loading: 100%"
+wait(1)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Input.mobile.Text = "Loaded! :)"
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Desc.Text = "The script succesfully loaded!"
+wait(5)
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.CheckPlatform.Visible = false
