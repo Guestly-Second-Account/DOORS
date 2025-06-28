@@ -256,3 +256,13 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Phonker"))()
     end
 end)()
+
+-- Obstructioner
+coroutine.wrap(function()
+    while true do
+        wait(160)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Obstructioner"))()
+    end
+end)()
