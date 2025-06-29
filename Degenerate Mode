@@ -14,6 +14,15 @@ local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFr
 caption.TextColor3 = Color3.fromRGB(3, 255, 11)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credit by Guestly",true)
 
+-- Animation Idle
+local pl = game.Players.LocalPlayer.Character
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://507777623"
+
+fallen = pl:FindFirstChildOfClass('Humanoid'):LoadAnimation(animation)
+
+fallen:Play()
+
 -- Doors sound changer
 coroutine.wrap(function()
     while true do
