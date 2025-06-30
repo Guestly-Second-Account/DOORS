@@ -275,3 +275,13 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Obstructioner"))()
     end
 end)()
+
+-- Goofier
+coroutine.wrap(function()
+    while true do
+        wait(130)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Goofier"))()
+    end
+end)()
