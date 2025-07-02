@@ -168,3 +168,13 @@ coroutine.wrap(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Sadler"))()
     end
 end)()
+
+-- Exile
+coroutine.wrap(function()
+    while true do
+        wait(math.random(220, 350))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Exile"))()
+    end
+end)()
