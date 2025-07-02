@@ -31,17 +31,8 @@ workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Do
     end
 end)()
 
--- Jump Enable
-game.Players.LocalPlayer.Character:SetAttribute("CanJump", true)
-
--- Sprint Bar
-loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/refs/heads/main/Hardcore%20Sprint%20System%20(PC%20and%20Mobile%20Adaptation).lua.txt"))()
-
 -- Guiding light turn to Mischevious light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/DOORS/refs/heads/main/Twistedlight"))()
-
---Warning Ui
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/DOORS/refs/heads/main/Insanitas%20warning"))()
 
 AntiDoorOpener:Disconnect()
 
