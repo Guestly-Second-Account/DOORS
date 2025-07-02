@@ -43,6 +43,8 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/
 --Warning Ui
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/DOORS/refs/heads/main/Insanitas%20warning"))()
 
+AntiDoorOpener:Disconnect()
+
 -- Paintings Images Changer
 coroutine.wrap(function()
 local painters = 1
@@ -94,8 +96,6 @@ game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(functio
 end)
 end)()
 
-AntiDoorOpener:Disconnect()
-
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ff0083'>[Insanitas Mode]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
@@ -104,7 +104,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/
 -- Dual
 coroutine.wrap(function()
     while true do
-        wait(130)
+        wait(180)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Dual"))()
@@ -114,7 +114,7 @@ end)()
 -- Vulgar
 coroutine.wrap(function()
     while true do
-        wait(340)
+        wait(400)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Vulgar"))()
@@ -124,7 +124,7 @@ end)()
 -- I-95
 coroutine.wrap(function()
     while true do
-        wait(600)
+        wait(790)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/I-95"))()
@@ -134,7 +134,7 @@ end)()
 -- Faint
 coroutine.wrap(function()
     while true do
-        wait(230)
+        wait(260)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Faint"))()
@@ -144,7 +144,7 @@ end)()
 -- Supervisor
 coroutine.wrap(function()
     while true do
-        wait(95)
+        wait(120)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Supervisor"))()
