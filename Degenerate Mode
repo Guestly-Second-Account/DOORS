@@ -289,7 +289,17 @@ end)()
 -- Watcher
 coroutine.wrap(function()
     while true do
-        wait(160)
+        wait(230)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Watcher"))()
+    end
+end)()
+
+-- Tricker
+coroutine.wrap(function()
+    while true do
+        wait(330)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Tricker"))()
     end
 end)()
