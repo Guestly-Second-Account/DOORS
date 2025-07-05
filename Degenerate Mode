@@ -171,7 +171,7 @@ end)()
 -- Blinker
 coroutine.wrap(function()
     while true do
-        wait(85)
+        wait(165)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Blinker"))()
     end
 end)()
@@ -179,7 +179,7 @@ end)()
 -- Subtlety
 coroutine.wrap(function()
     while true do
-        wait(100)
+        wait(125)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
@@ -189,7 +189,7 @@ end)()
 -- Looper
 coroutine.wrap(function()
     while true do
-        wait(190)
+        wait(300)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Looper"))()
@@ -199,7 +199,7 @@ end)()
 -- Coersion
 coroutine.wrap(function()
     while true do
-        wait(380)
+        wait(440)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
