@@ -1,0 +1,255 @@
+local AntiDoorOpener = game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
+end)
+
+-- Loading Ui
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20mode%20loading%20ui"))()
+wait(1)
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(169, 3, 252)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Lunacy Mode Remastered Actived!",true)
+wait(2)
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(169, 3, 252)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits by Guestly and Dragon's Dream(Vuivuiviu2)",true)
+
+-- Doors sound changer
+coroutine.wrap(function()
+    while true do
+        wait()
+
+workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Open.SoundId = "rbxassetid://833871080"
+
+workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Open.PlaybackSpeed = 1.2
+
+workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.Bell.SoundId = "rbxassetid://0"
+        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.SoundId = "rbxassetid://833871080"
+
+workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.PlaybackSpeed = 1.2
+        workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.TimePosition = 0
+    end
+end)()
+
+-- Guiding light turn to Lunacy light
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20light"))()
+
+-- Paintings Images Changer
+coroutine.wrap(function()
+local painters = 1
+local paints = {
+	[1] = {"rbxassetid://12625633899","Depth The Dark."},
+	[2] = {"rbxassetid://11678966779","WH1T3..."},
+	[3] = {"rbxassetid://11877292178","???"},
+	[5] = {"rbxassetid://128206094637578","Guestly."},
+      [6] = {"rbxassetid://82969730394546","Vuivuiviu2."},
+	[8] = {"rbxassetid://13187070161","Smiler - Dupe."},
+	[9] = {"rbxassetid://91844042069377","Nowhywhat."}
+}
+
+-- New Paintings
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+	local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+	if room:FindFirstChild("Assets") then
+		local paintings = {}
+		for i,painting in next,room:FindFirstChild("Assets"):GetChildren() do
+			if painting.Name:find("Painting") then
+				table.insert(paintings,painting)
+			end
+		end
+		if #paintings > 0 then
+			local currentpainting
+			if paintings[#paintings] then
+				painters = painters + 1
+				currentpainting = paintings[#paintings]
+			else
+				currentpainting = paintings[1]
+			end
+			if currentpainting then
+				if currentpainting:FindFirstChild("Canvas") then
+					local selected = paints[math.random(1,#paints)]
+					if currentpainting:FindFirstChild("InteractPrompt") then
+						local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+                        cloning.Name = "fakeInteract"
+						cloning.Parent = currentpainting
+						currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+						local t = cloning.Triggered:Connect(function()
+							require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(string.gsub("This painting is titled \"NAMEOFTHING\"","NAMEOFTHING",selected[2]), true)
+						end)
+					end
+					currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+				end
+			end
+		end
+	end
+end)
+end)()
+
+-- Lighting Stand Model Changer
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20light%20chabger"))()
+
+AntiDoorOpener:Disconnect()
+
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#9400ff'>[Lunacy Mode (Remastered)]: Script Succesfully Executed/Loaded.</font>")
+
+-- Intro
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20mode%20intro"))()
+
+-- Jumpscare Bủn Tím
+game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabel.Image = "rbxassetid://116146835376358"
+game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabelBig.Image = "rbxassetid://116146835376358"
+
+-- Lunacy Screech Changer
+game.ReplicatedStorage.Entities.Screech.Top.Eyes.Color = Color3.fromRGB(189, 23, 255)
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Caught.PlaybackSpeed = 0.7
+game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech.Attack.PlaybackSpeed = 0.7
+
+-- Fake Screech
+coroutine.wrap(function()
+    while true do
+        wait(50)
+        local player = game.Players.LocalPlayer
+local mainGame = require(player.PlayerGui.MainUI.Initiator.Main_Game)
+local screechModule =
+require(player.PlayerGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)
+
+screechModule(mainGame)
+    end
+end)()
+
+-- Bủn Tím
+coroutine.wrap(function()
+    while true do
+        wait()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(5)
+
+if game.Workspace:FindFirstChild("RushMoving") then
+game.Workspace.RushMoving.RushNew.Attachment.ParticleEmitter.Texture = "rbxassetid://116146835376358"    game.Workspace.RushMoving.RushNew.PlaySound.PlaybackSpeed = 0.2
+game.Workspace.RushMoving.RushNew.PlaySound.RollOfMaxDistance = 500 game.Workspace.RushMoving.RushNew.Footsteps.PlaybackSpeed = 2
+workspace.RushMoving.RushNew.Footsteps.SoundId = "rbxassetid://18695345785"
+workspace.RushMoving.RushNew.Footsteps.RollOffMaxDistance = 250
+workspace.RushMoving.RushNew.PlaySound.SoundId = "rbxassetid://9113218672"
+workspace.RushMoving.RushNew.Footsteps.DistortionSoundEffect:Destroy()
+workspace.RushMoving.RushNew.Footsteps.EqualizerSoundEffect:Destroy()
+workspace.RushMoving.RushNew.Footsteps.FlangeSoundEffect:Destroy()
+workspace.RushMoving.RushNew.Footsteps.TremoloSoundEffect:Destroy()
+workspace.RushMoving.RushNew.PlaySound.DistortionSoundEffect:Destroy()
+workspace.RushMoving.RushNew.PlaySound.EqualizerSoundEffect:Destroy()
+workspace.RushMoving.RushNew.PlaySound.FlangeSoundEffect:Destroy()
+workspace.RushMoving.RushNew.PlaySound.TremoloSoundEffect:Destroy()
+workspace.RushMoving.RushNew.Attachment.PointLight.Color = Color3.fromRGB(146, 3, 255)
+workspace.RushMoving.RushNew.Attachment.PointLight.Brightness = 5
+workspace.RushMoving.RushNew.Attachment.PointLight.Range = 20
+workspace.RushMoving.RushNew.Attachment.PointLight.Enabled = true
+game.ReplicatedStorage.GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Lunacy Rush"
+
+local smoke = Instance.new("Smoke")
+	smoke.Parent = game.Workspace.RushMoving.RushNew.Attachment
+	smoke.Name = "Smoke"
+  smoke.Color = Color3.fromRGB(146, 3, 255)
+workspace.RushMoving.RushNew.Attachment.BlackTrail:Destroy()
+workspace.RushMoving.RushNew.Attachment.Black:Destroy()
+end
+end
+end)()
+
+-- Fake Eyes
+coroutine.wrap(function()
+    while true do
+        wait(115)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Fake-Eyes"))()
+    end
+end)()
+
+-- Minecraft Block
+coroutine.wrap(function()
+    while true do
+        wait(math.random(69, 196))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Lunacy-mode/main/Minecraft%20block"))()
+    end
+end)()
+
+-- Lunacy PointLight
+coroutine.wrap(function()
+    while true do
+        wait()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20pointlight"))()
+    end
+end)()
+
+-- Supervisor
+coroutine.wrap(function()
+    while true do
+        wait(math.random(150, 200))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Lunacy-Supervisor"))()
+    end
+end)()
+
+-- Painer
+coroutine.wrap(function()
+    while true do
+        wait(math.random(380, 450))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Painer"))()
+    end
+end)()
+
+-- The Fallen
+coroutine.wrap(function()
+    while true do
+        wait(700)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/The%20Fallen"))()
+    end
+end)()
+
+-- Vioblaze
+coroutine.wrap(function()
+    while true do
+        wait(math.random(100, 120))
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Vioblaze"))()
+    end
+end)()
+
+-- Trun
+coroutine.wrap(function()
+    while true do
+        wait(550)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Lunacy-mode-entity-thang-nao-an-cap-lam-con-cho/main/Trun"))()
+    end
+end)()
+
+-- Chaser
+coroutine.wrap(function()
+    while true do
+        wait(320)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Chaser"))()
+    end
+end)()
+
+-- Blocker
+coroutine.wrap(function()
+    while true do
+        wait(75)
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Blocker"))()
+    end
+end)()
