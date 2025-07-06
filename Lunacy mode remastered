@@ -8,11 +8,11 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-S
 wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(169, 3, 252)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Lunacy Mode Remastered Actived!",true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Lunacy Mode Actived!",true)
 wait(2)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(169, 3, 252)
-require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits by Guestly and Dragon's Dream(Vuivuiviu2)",true)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credits by Guestly, Vuivuiviu2, Nowhywhat and Voorpr0",true)
 
 -- Doors sound changer
 coroutine.wrap(function()
@@ -90,7 +90,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-S
 
 AntiDoorOpener:Disconnect()
 
-game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#9400ff'>[Lunacy Mode (Remastered)]: Script Succesfully Executed/Loaded.</font>")
+game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#9400ff'>[Lunacy Mode]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20mode%20intro"))()
