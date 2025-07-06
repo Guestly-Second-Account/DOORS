@@ -186,6 +186,16 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
     end
 end)()
 
+-- Semi-Gambler
+coroutine.wrap(function()
+    while true do
+        wait(150)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Semi-Gambler"))()
+    end
+end)()
+
 -- Looper
 coroutine.wrap(function()
     while true do
