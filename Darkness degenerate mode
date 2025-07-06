@@ -13,6 +13,10 @@ wait(2)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(255, 255, 255)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Credit by Guestly",true)
+wait(2)
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(255, 255, 255)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Thanks for help by Vuivuiviu2 gave me night vision script!",true)
 
 -- Animation Idle
 local pl = game.Players.LocalPlayer.Character
