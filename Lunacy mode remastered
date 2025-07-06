@@ -3,9 +3,6 @@ game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
 game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
 end)
 
--- Loading Ui
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20mode%20loading%20ui"))()
-wait(1)
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(169, 3, 252)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Lunacy Mode Actived!",true)
@@ -30,6 +27,9 @@ workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Do
         workspace.CurrentRooms[game.ReplicatedStorage.GameData.LatestRoom.Value].Door.Door.SlamOpen.TimePosition = 0
     end
 end)()
+
+-- Mc spawn in door 0
+loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Lunacy-mode/main/Minecraft%20block"))()
 
 -- Guiding light turn to Lunacy light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20light"))()
@@ -93,7 +93,10 @@ AntiDoorOpener:Disconnect()
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#9400ff'>[Lunacy Mode]: Script Succesfully Executed/Loaded.</font>")
 
 -- Intro
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Lunacy%20mode%20intro"))()
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
+caption.TextColor3 = Color3.fromRGB(169, 3, 252)
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Lunacy Mode initiated!",true)
 
 -- Jumpscare Bủn Tím
 game.Players.LocalPlayer.PlayerGui.MainUI.Jumpscare.Jumpscare_Rush.ImageLabel.Image = "rbxassetid://116146835376358"
@@ -197,7 +200,7 @@ end)()
 -- Painer
 coroutine.wrap(function()
     while true do
-        wait(math.random(380, 450))
+        wait(math.random(430, 580))
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Painer"))()
@@ -237,7 +240,7 @@ end)()
 -- Chaser
 coroutine.wrap(function()
     while true do
-        wait(320)
+        wait(380)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Chaser"))()
