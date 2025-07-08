@@ -389,3 +389,13 @@ game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Tricker"))()
     end
 end)()
+
+-- Healer
+coroutine.wrap(function()
+    while true do
+        wait(315)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Healer"))()
+    end
+end)()
