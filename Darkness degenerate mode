@@ -47,7 +47,6 @@ end)()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Darkness%20degenerate%20mode%20nightvision"))()
 
 workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Light_Fixtures:Destroy()
-workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Chandelier:Destroy()
 
 -- Fog
 game.Lighting.Brightness = 0
@@ -73,21 +72,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Doors-Hubs/
 
 -- Guiding light turn to Viridis light
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/DOORS/refs/heads/main/Viridislight"))()
-
--- Đặt script này trong `ServerScriptService` hoặc `StarterPlayer > StarterPlayerScripts` nếu muốn client nghe được hiệu ứng
-local SoundService = game:GetService("SoundService")
-
--- Tạo hiệu ứng vang
-local reverbEffect = Instance.new("ReverbSoundEffect")
-reverbEffect.Name = "EchoEffect"
-reverbEffect.DecayTime = 2 -- Thời gian vang, có thể điều chỉnh (1 - 5)
-reverbEffect.Density = 0.8
-reverbEffect.Diffusion = 0.9
-reverbEffect.DryLevel = 0
-reverbEffect.WetLevel = 0.8
-
--- Thêm hiệu ứng vào SoundService (áp dụng cho tất cả âm thanh toàn game)
-reverbEffect.Parent = SoundService
 
 -- Toxic Bar
 local tweenservice = game:GetService("TweenService")
