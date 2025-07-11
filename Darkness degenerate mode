@@ -18,6 +18,8 @@ local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFr
 caption.TextColor3 = Color3.fromRGB(255, 255, 255)
 require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption("Thanks for help by Vuivuiviu2 gave me night vision script!",true)
 
+AntiDoorOpener:Disconnect()
+
 -- Animation Idle
 local pl = game.Players.LocalPlayer.Character
         local animation = Instance.new("Animation")
@@ -49,8 +51,8 @@ workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom
 
 -- Fog
 game.Lighting.Brightness = 0
-game.Lighting.FogStart = 7
-game.Lighting.FogEnd = 20
+game.Lighting.FogStart = 5
+game.Lighting.FogEnd = 15
 game.Lighting.FogColor = Color3.fromRGB(0,0,0)
 
 -- Light Destroyer
@@ -61,41 +63,6 @@ coroutine.wrap(function()
         wait(0)
 workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Light_Fixtures:Destroy()
     end
-end)()
-
--- Fireplace Destroyer
-coroutine.wrap(function()
-    while true do
-        wait(0)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-local fireplace = workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Fireplace
-if not fireplace then return end
-
-if fireplace then
-workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Fireplace:Destroy()
-end
-end
-end)()
-
--- Chandelier Destroyer
-coroutine.wrap(function()
-    while true do
-        wait(0)
-        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0)
-local chandelier = workspace.CurrentRooms:FindFirstChild(game.ReplicatedStorage.GameData.LatestRoom.Value).Assets.Chandelier
-if not chandelier then return end
-
-if chandelier then 
-for _, v in pairs(chandelier:GetDescendants()) do
-            if v:IsA("Model") and (v.Name == "Chandelier") then
-                local pivot = v:GetPivot()
-                v:Destroy()
-end
-end
-end
-end
 end)()
 
 -- Minimap
@@ -230,8 +197,6 @@ game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(functio
 	end
 end)
 end)()
-
-AntiDoorOpener:Disconnect()
 
 -- Intro
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Darkness%20degenerate%20intro"))()
