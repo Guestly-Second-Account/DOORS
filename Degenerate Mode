@@ -209,7 +209,8 @@ coroutine.wrap(function()
         wait(125)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Subtlety"))()
     end
 end)()
 
@@ -219,7 +220,8 @@ coroutine.wrap(function()
         wait(150)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Semi-Gambler"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Semi-Gambler"))()
     end
 end)()
 
@@ -229,7 +231,8 @@ coroutine.wrap(function()
         wait(300)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Looper"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Looper"))()
     end
 end)()
 
@@ -239,7 +242,8 @@ coroutine.wrap(function()
         wait(440)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Coersion"))()
     end
 end)()
 
@@ -249,7 +253,8 @@ coroutine.wrap(function()
         wait(650)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Forcibly"))()
     end
 end)()
 
@@ -259,7 +264,8 @@ coroutine.wrap(function()
         wait(790)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Grief"))()
     end
 end)()
 
@@ -269,7 +275,8 @@ coroutine.wrap(function()
         wait(290)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Gambler"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Gambler"))()
     end
 end)()
 
@@ -279,7 +286,8 @@ coroutine.wrap(function()
         wait(897)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Fugitive"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Fugitive"))()
     end
 end)()
 
@@ -289,7 +297,8 @@ coroutine.wrap(function()
         wait(1120)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Reflector"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Reflector"))()
     end
 end)()
 
@@ -299,7 +308,8 @@ coroutine.wrap(function()
         wait(450)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Phonker"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Phonker"))()
     end
 end)()
 
@@ -309,7 +319,8 @@ coroutine.wrap(function()
         wait(160)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Obstructioner"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/DoorsHubs/Tutorial/refs/heads/main/Obstructioner"))()
     end
 end)()
 
@@ -319,7 +330,8 @@ coroutine.wrap(function()
         wait(130)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Goofier"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Goofier"))()
     end
 end)()
 
@@ -337,7 +349,8 @@ coroutine.wrap(function()
         wait(330)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Tricker"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Tricker"))()
     end
 end)()
 
@@ -347,6 +360,7 @@ coroutine.wrap(function()
         wait(315)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Healer"))()
+        wait(0) 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Healer"))()
     end
 end)()
