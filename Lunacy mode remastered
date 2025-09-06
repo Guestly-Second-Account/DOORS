@@ -172,7 +172,7 @@ end)()
 -- Minecraft Block
 coroutine.wrap(function()
     while true do
-        wait(math.random(69, 196))
+        wait(69)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Lunacy-mode/main/Minecraft%20block"))()
@@ -192,7 +192,7 @@ end)()
 -- Supervisor
 coroutine.wrap(function()
     while true do
-        wait(math.random(150, 200))
+        wait(150)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Lunacy-Supervisor"))()
@@ -202,7 +202,7 @@ end)()
 -- Painer
 coroutine.wrap(function()
     while true do
-        wait(math.random(430, 580))
+        wait(430)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Painer"))()
@@ -222,7 +222,7 @@ end)()
 -- Vioblaze
 coroutine.wrap(function()
     while true do
-        wait(math.random(100, 120))
+        wait(120)
         game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Vioblaze"))()
