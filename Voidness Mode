@@ -496,7 +496,7 @@ end)()
 -- Nyxgrin
 coroutine.wrap(function()
     while true do
-        wait(410)
+        wait(250)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
         wait(0) loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Nyxgrin"))()
@@ -509,6 +509,7 @@ coroutine.wrap(function()
         wait(850)
        
 game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
-        wait(0) loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Seraphim-Mortis"))()
+        wait(0)
+loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Seraphim-Mortis"))()
     end
 end)()
