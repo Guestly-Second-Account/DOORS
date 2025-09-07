@@ -1,0 +1,514 @@
+local AntiDoorOpener = game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
+game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
+end)
+
+function GitAud(soundgit,filename)
+    SoundName=tostring(SoundName)
+    local url=soundgit
+    local FileName = filename
+    writefile(FileName..".mp3", game:HttpGet(url))
+    return (getcustomasset or getsynasset)(FileName..".mp3")
+end
+
+function CustomGitSound(soundlink, vol, filename)
+    local sound = Instance.new("Sound")
+    sound.SoundId = GitAud(soundlink, filename)
+    sound.Parent = workspace
+    sound.Volume = 1
+    sound.PlaybackSpeed = 1
+    sound.Name = "Suc"
+   sound:Play()
+end
+
+CustomGitSound("https://github.com/Doors-Guest-Scripts/Tutorial/raw/refs/heads/main/XRecorder_Edited_20250902_02.mp3?raw=true", 1, " Suc1")
+
+local lighting = game:GetService("Lighting")
+local players = game:GetService("Players")
+local chatService = game:GetService("TextChatService")
+local rs = game:GetService("ReplicatedStorage")
+
+local player = players.LocalPlayer
+local channel = chatService.TextChannels:FindFirstChild("RBXGeneral")
+
+local mainGameModule = player.PlayerGui
+    :WaitForChild("MainUI", 10)
+    :WaitForChild("Initiator", 10)
+    :FindFirstChild("Main_Game")
+
+local function showCaptionAndChat(captionText, chatText)
+    if mainGameModule then
+        local success, mainGame = pcall(require, mainGameModule)
+        if success and mainGame and mainGame.caption then
+            mainGame.caption("<font color='#ff69b4'>" .. captionText .. "</font>", true)
+        end
+    end
+    if channel then
+        channel:DisplaySystemMessage("<font color='#ff69b4'>" .. chatText .. "</font>")
+    end
+end
+
+task.spawn(function()
+    showCaptionAndChat("Voidness Mode Loaded Successfully.", "Cutie Light: Thanks for playing Voidness Mode")
+    task.wait(5)
+    showCaptionAndChat("Mode made by Vuivuiviu2, Guestly and Voorpr0", "Cutie Light: Mode made by Vuivuiviu2, Guestly and Voorpr0")
+    task.wait(5)
+    showCaptionAndChat("Have fun ðŸ‘", "Good Luck")
+end)
+
+lighting.FogColor = Color3.new(0, 0, 0)
+lighting.FogStart = 0
+lighting.FogEnd = 20
+task.spawn(function()
+    for i = 20, 80, 2 do
+        lighting.FogEnd = i
+        task.wait(0.1)
+    end
+end)
+
+local function removeLights(room)
+    if room:FindFirstChild("Assets") then
+        for _, obj in pairs(room.Assets:GetDescendants()) do
+            if (obj:IsA("Model") or obj:IsA("BasePart")) and not obj:IsA("Light") then
+                local name = obj.Name:lower()
+                if name:find("light") or name:find("chandelier") then
+                    obj:Destroy()
+                end
+            end
+        end
+    end
+end
+
+for _, room in pairs(workspace.CurrentRooms:GetChildren()) do
+    removeLights(room)
+end
+
+rs.GameData.LatestRoom.Changed:Connect(function()
+    task.wait(0.2)
+    local newRoom = workspace.CurrentRooms:FindFirstChild(tostring(rs.GameData.LatestRoom.Value))
+    if newRoom then
+        removeLights(newRoom)
+    end
+end)
+
+-- Paintings Images Changer
+coroutine.wrap(function()
+local painters = 1
+local paints = {
+	[1] = {"rbxassetid://12625633899","Depth The Dark."},
+	[2] = {"rbxassetid://11678966779","WH1T3..."},
+	[3] = {"rbxassetid://11877292178","???"},
+	[5] = {"rbxassetid://128206094637578","Guestly."},
+      [6] = {"rbxassetid://82969730394546","Vuivuiviu2."},
+	[8] = {"rbxassetid://13187070161","Smiler - Dupe."},
+	[9] = {"rbxassetid://91844042069377","Nowhywhat."}
+}
+
+-- New Paintings
+game:GetService("ReplicatedStorage").GameData.LatestRoom.Changed:Connect(function()
+	local room = workspace.CurrentRooms[game:GetService("ReplicatedStorage").GameData.LatestRoom.Value]
+	if room:FindFirstChild("Assets") then
+		local paintings = {}
+		for i,painting in next,room:FindFirstChild("Assets"):GetChildren() do
+			if painting.Name:find("Painting") then
+				table.insert(paintings,painting)
+			end
+		end
+		if #paintings > 0 then
+			local currentpainting
+			if paintings[#paintings] then
+				painters = painters + 1
+				currentpainting = paintings[#paintings]
+			else
+				currentpainting = paintings[1]
+			end
+			if currentpainting then
+				if currentpainting:FindFirstChild("Canvas") then
+					local selected = paints[math.random(1,#paints)]
+					if currentpainting:FindFirstChild("InteractPrompt") then
+						local cloning = currentpainting:FindFirstChild("InteractPrompt"):Clone()
+                        cloning.Name = "fakeInteract"
+						cloning.Parent = currentpainting
+						currentpainting:FindFirstChild("InteractPrompt"):Destroy()
+						local t = cloning.Triggered:Connect(function()
+							require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption(string.gsub("This painting is titled \"NAMEOFTHING\"","NAMEOFTHING",selected[2]), true)
+						end)
+					end
+					currentpainting:FindFirstChild("Canvas"):FindFirstChildOfClass("SurfaceGui"):FindFirstChildOfClass("ImageLabel").Image = selected[1]
+				end
+			end
+		end
+	end
+end)
+end)()
+
+-- Guiding light turn to Cutie light
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Second-Account/DOORS/refs/heads/main/Cutielight"))()
+
+AntiDoorOpener:Disconnect()
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+local player = game.Players.LocalPlayer
+local playerGui = player:WaitForChild("PlayerGui")
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "Darkness"
+screenGui.Parent = playerGui
+screenGui.IgnoreGuiInset = true
+
+local red = Instance.new("ImageLabel")
+red.Name = "DarknessText"
+red.Size = UDim2.new(1, 0, 1, 0)
+red.BackgroundTransparency = 1 -- Make the background fully transparent
+red.Image = "rbxassetid://126042688895390" -- Set the image using a random Image ID
+red.ImageTransparency = 1
+red.Parent = screenGui
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Players.LocalPlayer.PlayerGui.Darkness.DarknessText, TweenInfo.new(3),{ImageTransparency = 0})
+TW:Play()
+wait(5)
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Players.LocalPlayer.PlayerGui.Darkness.DarknessText, TweenInfo.new(5),{ImageTransparency = 1})
+TW:Play()
+wait(5)
+game.Players.LocalPlayer.PlayerGui.Darkness:Destroy()
+
+-- CRUCIFIX NORMAL SPAWN
+
+coroutine.wrap(function()
+
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Connect(function()
+
+function spawncruxy(posy)
+
+local abc = game:GetObjects("rbxassetid://11631916882")[1]
+
+local cruxy = abc.Handle:Clone()
+
+abc:Destroy()
+
+cruxy.Parent = game.Workspace
+
+cruxy.Name = "Cruxy"
+
+cruxy.Position = posy
+
+cruxy.Anchored = true
+
+local xy = math.random(-90, 90)
+
+cruxy.CFrame = CFrame.lookAt(cruxy.Position, cruxy.Position - Vector3.new(xy, yy, zy))
+
+cruxy.Rotation = Vector3.new(0, xy, -90)
+
+local lighty = Instance.new("PointLight")
+
+lighty.Brightness = 10000
+
+lighty.Parent = cruxy
+
+lighty.Enabled = true
+
+lighty.Color = Color3.fromRGB(255,3,234)
+
+lighty.Range = 1
+
+local lightp = Instance.new("PointLight")
+
+lightp.Brightness = 3
+
+lightp.Parent = cruxy
+
+lightp.Enabled = true
+
+lightp.Color = Color3.fromRGB(255,82,241)
+
+lightp.Range = 10
+
+local prompty = Instance.new("ProximityPrompt")
+
+prompty.Name = "prompty"
+
+prompty.MaxActivationDistance = 5
+
+prompty.ObjectText = "Custom"
+
+prompty.RequiresLineOfSight = true
+
+prompty.Parent = cruxy
+
+prompty.Style = "Custom"
+
+prompty.Triggered:Connect(function()
+
+cruxy:Destroy()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/penguinManiack/Crucifix/main/Crucifix.lua'))()
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('You found a crucifix',true)
+
+wait(3)
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('It can helps you sometime',true)
+
+wait(3)
+
+require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game).caption('It only works with custom entities.',true)
+
+local Plr = Players.LocalPlayer
+
+local Char = Plr.Character or Plr.CharacterAdded:Wait()
+
+local Hum = Char:WaitForChild("Humanoid")
+
+local RightArm = Char:WaitForChild("RightUpperArm")
+
+local LeftArm = Char:WaitForChild("LeftUpperArm")
+
+local RightC1 = RightArm.RightShoulder.C1
+
+local LeftC1 = LeftArm.LeftShoulder.C1
+
+        local function setupCrucifix(tool)
+
+        RightArm.Name = "R_Arm"
+
+        LeftArm.Name = "L_Arm"
+
+        
+
+        RightArm.RightShoulder.C1 = RightC1 * CFrame.Angles(math.rad(-90), math.rad(-15), 0)
+
+        LeftArm.LeftShoulder.C1 = LeftC1 * CFrame.new(-0.2, -0.3, -0.5) * CFrame.Angles(math.rad(-125), math.rad(25), math.rad(25))
+
+end
+
+end)
+
+--
+
+end
+
+--
+
+local lastroom = game:GetService("ReplicatedStorage").GameData.LatestRoom.Value
+
+for _, v in next, game.Workspace.CurrentRooms[lastroom].Assets:GetDescendants() do
+
+    if v.Name == "Table" then
+
+        local randomy = math.random(1,90)
+
+            if randomy == 1 then
+
+        local positio = v.Main.Position + Vector3.new(0, 1.8, 0)
+
+        spawncruxy(positio)
+
+            end
+
+    end
+
+end
+
+--
+
+end)
+
+end)()
+
+--
+
+-- Động đất bủn đen
+coroutine.wrap(function()
+    while true do
+        wait()
+        game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0)
+
+if game.Workspace:FindFirstChild("RushMoving") then
+
+local spawner = loadstring(game:HttpGet("https://raw.githubusercontent.com/Voor-Pr00/Fogroom/refs/heads/main/Spawner%20v3"))()
+
+---====== Create entity ======---
+
+local entity = spawner.Create({
+	Entity = {
+		Name = "Dongdat",
+		Asset = "rbxassetid://104261822446449",
+		HeightOffset = 0
+	},
+	Lights = {
+		Flicker = {
+			Enabled = false,
+			Duration = 4
+		},
+		Shatter = false,
+		Repair = false
+	},
+	Light = {
+		Color = {1, 1, 1}
+	},
+
+	Earthquake = {
+		Enabled = true
+	},
+	CameraShake = {
+		Enabled = false,
+		Range = 100,
+		Values = {2.5, 35, 0.15, 2}
+	},
+	Movement = {
+		Speed = 1,
+		Delay = 10,
+		Reversed = false
+	},
+	Rebounding = {
+		Enabled = false,
+		Type = "Ambush",
+		Min = 1,
+		Max = 1,
+		Delay = 2
+	},
+	Damage = {
+		Enabled = false,
+		Range = 40,
+		Amount = 120
+	},
+	Crucifixion = {
+		Enabled = false,
+		Range = 40,
+		Resist = false,
+		Break = true
+	},
+	Death = {
+		Type = "Guiding",
+		Hints = {"Hmm, Blitz?", "is being a bully, huh?", "Don’t worry, I believe in you ", "When it screams and the ground shakes, just hide quickly, okay? You can do it", "bye :3"},
+		Cause = ""
+	}
+})
+
+---====== Debug entity ======---
+
+entity:SetCallback("OnSpawned", function()
+    print("Entity has spawned")
+wait(6)
+game.Workspace.Dongdat:Destroy()
+end)
+
+entity:SetCallback("OnStartMoving", function()
+    print("Entity has started moving")
+end)
+
+entity:SetCallback("OnEnterRoom", function(room, firstTime)
+    if firstTime == true then
+        print("Entity has entered room: ".. room.Name.. " for the first time")
+    else
+        print("Entity has entered room: ".. room.Name.. " again")
+    end
+end)
+
+entity:SetCallback("OnLookAt", function(lineOfSight)
+	if lineOfSight == true then
+		print("Player is looking at entity")
+	else
+		print("Player view is obstructed by something")
+	end
+end)
+
+entity:SetCallback("OnRebounding", function(startOfRebound)
+    if startOfRebound == true then
+        print("Entity has started rebounding")
+	else
+        print("Entity has finished rebounding")
+	end
+end)
+
+entity:SetCallback("OnDespawning", function()
+    print("Entity is despawning")
+end)
+
+entity:SetCallback("OnDespawned", function()
+    print("Entity has despawned")
+end)
+
+entity:SetCallback("OnDamagePlayer", function(newHealth)
+	if newHealth == 0 then
+		print("Entity has killed the player")
+	else
+		print("Entity has damaged the player")
+	end
+end)
+
+--[[
+DEVELOPER NOTE:
+By overwriting 'CrucifixionOverwrite' the default crucifixion callback will be replaced with your custom callback.
+
+entity:SetCallback("CrucifixionOverwrite", function()
+    print("Custom crucifixion callback")
+end)
+]]--
+
+---====== Run entity ======---
+
+entity:Run()
+end
+end
+end)()
+
+-- Blitz
+coroutine.wrap(function()
+    while true do
+        wait(135)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Tension-Mode-2.0/main/Blitz%3F"))()
+    end
+end)()
+
+-- Darkness
+coroutine.wrap(function()
+    while true do
+        wait(290)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-Second-Account/DOORS/refs/heads/main/Darkness"))()
+    end
+end)()
+
+-- A-60
+coroutine.wrap(function()
+    while true do
+        wait(700)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://raw.githubusercontent.com/vuivuiviu2/Tension-Mode-2.0/refs/heads/main/A-60%20The%20Multi%20Monster!"))()
+    end
+end)()
+
+-- Deadvil
+coroutine.wrap(function()
+    while true do
+        wait(math.random(70, 150))
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Guestly-V2-2/Random-Stuffs/refs/heads/main/Deadvil"))()
+    end
+end)()
+
+-- Nyxgrin
+coroutine.wrap(function()
+    while true do
+        wait(410)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Nyxgrin"))()
+    end
+end)()
+
+-- Seraphim Mortis
+coroutine.wrap(function()
+    while true do
+        wait(850)
+       
+game.ReplicatedStorage.GameData.LatestRoom.Changed:Wait()
+        wait(0) loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Guestly-V2-2/Doors/refs/heads/main/Seraphim-Mortis"))()
+    end
+end)()
