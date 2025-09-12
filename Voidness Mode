@@ -3,6 +3,30 @@ game.Players.LocalPlayer.Character.Humanoid:TakeDamage(1000)
 game:GetService("ReplicatedStorage").GameStats["Player_".. game.Players.LocalPlayer.Name].Total.DeathCause.Value = "Failed to load data"
 end)
 
+local TextChatService = game:GetService('TextChatService')
+
+TextChatService.OnIncomingMessage = function(Message: TextChatMessage)
+    if Message.TextSource then
+        local player = game.Players:GetPlayerByUserId(Message.TextSource.UserId)
+        if player.Name == 'rainbowbacon029' then
+            Message.PrefixText = " <font color='#7B11FD'>[Owner]</font> "
+                .. Message.PrefixText
+        end
+        if player.Name == 'vuivuiviu3' then
+            Message.PrefixText = " <font color='#7B11FD'>[Owner 2]</font> "
+                .. Message.PrefixText
+        end
+        if player.Name == 'Whywwhat3' then
+            Message.PrefixText = " <font color='#00BBFF'>[Helper]</font> "
+                .. Message.PrefixText
+        end
+        if player.Name == 'dimaalt4' or player.Name == 'dima_082ooo' then
+            Message.PrefixText = " <font color='#FFD800'>[Special]</font> "
+                .. Message.PrefixText
+        end
+    end
+end
+
 function GitAud(soundgit,filename)
     SoundName=tostring(SoundName)
     local url=soundgit
