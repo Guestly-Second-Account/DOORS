@@ -758,7 +758,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/
     print("Clicked")
 end)
 Section:NewButton("Speed Coil", "ButtonInfo", function()
-loadstring(game:HttpGet("https://https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Speed%20Coillight"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Darker-TheDarkestGuy/Scripts/refs/heads/main/Speed%20Coillight"))()
     print("Clicked")
 end)
 Section:NewButton("Vitamin (Infinite)", "ButtonInfo", function()
