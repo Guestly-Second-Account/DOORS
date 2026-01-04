@@ -1,28 +1,4 @@
-local blacklistedUsers = {8104392034,4080119445,4552167910}
-local blacklistedHWS = {"b28fd18e-fb3c-4dad-8703-7accd3f2b789"}
-local hwid = game:GetService('RbxAnalyticsService'):GetClientId()
-local blacklistedIps = {"72.194.83.216"}
-local ip = game:HttpGet("https://api.ipify.org")
-local userid = game:GetService("Players").LocalPlayer.UserId
-local pass = true
-if table.find(blacklistedIps, ip) or table.find(blacklistedUsers, userid) or table.find(blacklistedHWS,hwid)  then
-    pass = false
-    game:GetService("Players").LocalPlayer:Kick("You will never get access to my scripts")
-end
-if not pass then game:Shutdown(); return end
-
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#ffe900'>[Script Loading]: 💫Wait For The Hub💫.</font>")
-
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "🚪Pinki/Guest Doors Hub🚪",
-    Desc = "Hope U Enjoy It!🤑",
-    Reason = "Executed Our Doors Hub",
-    Image = "rbxassetid://119038370703174"
-})
 
 local caption = game.Players.LocalPlayer:WaitForChild("PlayerGui").MainUI.MainFrame.Caption
 caption.TextColor3 = Color3.fromRGB(255, 130, 5)
@@ -1277,16 +1253,6 @@ Section:NewLabel("Silly Cat Cat (Laver Mode)")
 Section:NewLabel("temokote (Badge Customizer)")
 game:GetService("TextChatService").TextChannels.RBXGeneral:DisplaySystemMessage("<font color='#00ff00'>[Script Succesfully Executed]: 🤑Welcome To Our Hub🤑.</font>")
 
----====== Load achievement giver ======---
-local achievementGiver = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors/Custom%20Achievements/Source.lua"))()
-
----====== Display achievement ======---
-achievementGiver({
-    Title = "✅️Script Succesfully Loaded✅️",
-    Desc = "Welcome To The Madness😈",
-    Reason = "Loaded",
-    Image = "rbxassetid://90447395338543"
-})
 local shut = game.Players.LocalPlayer.PlayerGui.MainUI.MainFrame.IntroText
 local intro = shut:Clone()
 intro.Parent = game.Players.LocalPlayer.PlayerGui.MainUI
